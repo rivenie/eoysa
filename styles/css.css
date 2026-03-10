@@ -115,18 +115,22 @@ body {
 /* Hero Section */
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/PORTADA.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: initial;
+    text-align: justify;
     color: white;
 }
 
+.hero-content{
+    margin-left: 2%;
+}
+
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 68px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -155,6 +159,7 @@ body {
 /* Sección imagen izquierda */
 .section {
     padding: 80px 0;
+    background: #f6f6f6;
 }
 
 .image-left {
@@ -187,11 +192,7 @@ body {
 }
 
 .text-side h2 {
-    font-size: 36px;
-    background: linear-gradient(135deg, var(--color-azul-principal) 0%, var(--color-azul-claro) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 36px;    
     margin-bottom: 20px;
 }
 
@@ -204,11 +205,24 @@ body {
 .section-title {
     text-align: center;
     font-size: 36px;
+    margin-bottom: 50px;
+    /* ELIMINA estas líneas:
     background: linear-gradient(135deg, var(--color-azul-principal) 0%, var(--color-azul-claro) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 50px;
+    */
+}
+
+.text-black {
+    color: #000000;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--color-azul-principal) 0%, var(--color-azul-claro) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .about-wrapper {
@@ -429,6 +443,14 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero{
+        text-align: center;    
+    }
+    
+    .contact-info{
+        justify-content: center;
+    }
+
     .hamburger {
         display: flex;
     }
