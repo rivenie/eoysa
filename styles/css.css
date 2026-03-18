@@ -5,8 +5,10 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-textos);
     line-height: 1.6;
     color: #333;
 }
@@ -19,10 +21,12 @@ body {
 
 /* Paleta de colores */
 :root {
-    --color-azul-principal: #1EAADF;
+   --color-azul-principal: #1EAADF;
     --color-verde-claro: #AEDC5B;
     --color-azul-claro: #62CBF6;
     --color-verde-oscuro: #71BB41;
+    --font-titulos: 'Montserrat', sans-serif;
+    --font-textos: 'Open Sans', sans-serif;
 }
 
 /* Top Bar */
@@ -142,6 +146,8 @@ body {
     text-align: justify;
     color: white;
 }
+
+
 
 .hero-content {
     margin-left: 2%;
@@ -527,10 +533,18 @@ body {
 
 /*EXPERIENCIA*/
 
+.hero.experiencia {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/PORTADA_EXPERIENCIA.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 .experiencia {
     background: #f6f6f6;
     padding: 60px 0;
 }
+
+
 
 .experiencia-title {
     font-size: 36px;
@@ -649,6 +663,16 @@ body {
 }
 
 /*************SERVICIOS**************/
+
+.hero.servicios {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/PORTADA_SERVICIOS.jpg');
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-size: auto, auto;
+    background-size: cover;
+    background-position: center;
+}
+
 .servicio-item {
     padding: 70px 0;
     background: #ffffff;
@@ -724,7 +748,7 @@ body {
 .servicio-imagen img {
     width: 100%;
     border-radius: 16px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
 }
 
@@ -734,16 +758,17 @@ body {
 
 /* Responsive */
 @media (max-width: 992px) {
+
     .servicio-grid,
     .servicio-grid.reverse {
         flex-direction: column;
         gap: 30px;
     }
-    
+
     .servicio-texto h2 {
         font-size: 32px;
     }
-    
+
     .servicio-texto h2 .text-black {
         font-size: 26px;
     }
@@ -756,6 +781,16 @@ body {
 }
 
 /* ===== PÁGINA CONTACTO ===== */
+
+.hero.contacto {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/PORTADA_CONTACTO.jpg');
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-size: auto, auto;
+    background-size: cover;
+    background-position: center;
+}
+
 .contacto-principal {
     padding: 80px 0;
     background: #ffffff;
@@ -825,7 +860,7 @@ body {
     background: #f8f9fa;
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .contacto-formulario h3 {
@@ -909,7 +944,7 @@ body {
 .mapa-container {
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
@@ -930,7 +965,7 @@ body {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .contacto-titulo {
         font-size: 32px;
     }
@@ -940,22 +975,22 @@ body {
     .contacto-principal {
         padding: 50px 0;
     }
-    
+
     .contacto-formulario {
         padding: 25px;
     }
-    
+
     .contacto-item {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .contacto-icono {
         width: 40px;
         height: 40px;
         font-size: 16px;
     }
-    
+
     .mapa-container iframe {
         height: 300px;
     }
