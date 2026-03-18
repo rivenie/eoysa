@@ -23,20 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scroll para los enlaces internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
     // Efecto de scroll en el navbar
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
@@ -104,27 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Validación simple para formulario (si se añade después)
-function validateForm() {
-    const name = document.getElementById('name')?.value;
-    const email = document.getElementById('email')?.value;
-    const phone = document.getElementById('phone')?.value;
-
-    if (!name || !email || !phone) {
-        alert('Por favor, completa todos los campos');
-        return false;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Por favor, ingresa un email válido');
-        return false;
-    }
-
-    alert('Formulario enviado correctamente');
-    return true;
-}
-
 // Función para copiar número de teléfono
 function copyPhoneNumber() {
     const phoneNumber = '+51 982 168 786';
@@ -134,23 +99,3 @@ function copyPhoneNumber() {
         console.error('Error al copiar:', err);
     });
 }
-
-// Detectar cuando el usuario está inactivo (opcional)
-let inactivityTime = function() {
-    let time;
-    window.onload = resetTimer;
-    document.onmousemove = resetTimer;
-    document.onkeypress = resetTimer;
-    document.onscroll = resetTimer;
-
-    function resetTimer() {
-        clearTimeout(time);
-        time = setTimeout(() => {
-            // Opcional: mostrar notificación o hacer algo después de inactividad
-            console.log('Usuario inactivo');
-        }, 300000); // 5 minutos
-    }
-};
-
-// Inicializar detección de inactividad
-// inactivityTime(); // Descomentar si se desea usar
